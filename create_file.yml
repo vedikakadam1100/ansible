@@ -1,0 +1,12 @@
+---
+- name: Create a file 
+  hosts: localhost
+  tasks: 
+  - name: 
+    ansible.builtin.file:
+      path: /root/anisble.txt
+      state: touch
+# home-work 
+
+# Create a folder -> /home/ec2-user/aws-> mode -> 700
+# copy file -> /root/ansible.txt -> /home/ec2-user/aws

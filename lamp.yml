@@ -1,0 +1,16 @@
+#lamp -> amazon linux->
+#httpd, mariadb105-server .mariadb, php, php-fpm
+---
+- name: install lamp in amazon linux
+  hosts: localhost
+  become: yes
+  tasks:
+  # install httpd
+  - name:  install httpd package
+    ansible.builtin.dnf:
+      name: httpd
+      state: presnt
+  # install mariadb
+  - name: mariadb105-server
+    state: presnt
+    
